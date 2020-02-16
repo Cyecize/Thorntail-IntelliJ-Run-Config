@@ -1,0 +1,8 @@
+target
+
+### IntelliJ IDEA ###
+.idea
+*.iml
+.project
+.classpath
+.thorntail-runner-cache/

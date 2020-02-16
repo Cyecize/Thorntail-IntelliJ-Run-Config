@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xmlns="http://maven.apache.org/POM/4.0.0"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+  <artifactId>thorntail-sample</artifactId>
+
+  <groupId>com.cyecize</groupId>
+  <modelVersion>4.0.0</modelVersion>
+  <name>Thorntail Sample App - Members</name>
+  <packaging>war</packaging>
+  <version>1.0</version>
+
+  <properties>
+    <failOnMissingWebXml>false</failOnMissingWebXml>
+    <maven.compiler.source>1.8</maven.compiler.source>
+
+    <maven.compiler.target>1.8</maven.compiler.target>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+
+    <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+
+    <version.thorntail>2.6.0.Final</version.thorntail>
+  </properties>
+
+  <build>
+    <finalName>${project.artifactId}</finalName>
+
+    <plugins>
+      <plugin>
+        <artifactId>thorntail-maven-plugin</artifactId>
+        <executions>
+          <execution>
+            <goals>
+              <goal>package</goal>
+            </goals>
+          </execution>
+        </executions>
+        <groupId>io.thorntail</groupId>
+        <version>${version.thorntail}</version>
+      </plugin>
+    </plugins>
+
+  </build>
+
+  <dependencies>
+    <dependency>
+      <artifactId>cdi</artifactId>
+      <groupId>io.thorntail</groupId>
+      <version>${version.thorntail}</version>
+    </dependency>
+    <dependency>
+      <artifactId>jaxrs</artifactId>
+      <groupId>io.thorntail</groupId>
+      <version>${version.thorntail}</version>
+    </dependency>
+  </dependencies>
+
+  <dependencyManagement>
+    <dependencies>
+      <dependency>
+        <artifactId>bom-all</artifactId>
+        <groupId>io.thorntail</groupId>
+        <scope>import</scope>
+        <type>pom</type>
+        <version>${version.thorntail}</version>
+      </dependency>
+    </dependencies>
+  </dependencyManagement>
+
+</project>
