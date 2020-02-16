@@ -53,6 +53,12 @@
       <groupId>io.thorntail</groupId>
       <version>${version.thorntail}</version>
     </dependency>
+    <dependency>
+      <groupId>io.thorntail</groupId>
+      <artifactId>thorntail-runner</artifactId>
+      <version>${version.thorntail}</version>
+    </dependency>
+
   </dependencies>
 
   <dependencyManagement>
